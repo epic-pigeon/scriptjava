@@ -147,6 +147,9 @@ function compile(code) {
                                     path.node.key
                                 ]
                             },
+                            StringLiteral(path) {
+                                path.node.value = path.node.value.split("").reverse().join("");
+                            }
                         }
                     }
                 }
